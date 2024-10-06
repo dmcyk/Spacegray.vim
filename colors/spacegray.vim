@@ -8,6 +8,10 @@
 " Setup {{{1
 hi clear
 
+if filereadable($VIMRUNTIME . "/colors/vim.lua")
+  source $VIMRUNTIME/colors/vim.lua
+endif
+
 if has('gui_running') && &background !=# 'dark'
   set background=dark
 endif
